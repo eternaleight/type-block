@@ -71,4 +71,8 @@ img {
 html {
   background: #232332; }
 
+.fl {
+  display: flex;
+  flex-direction: column; }
+
 /*# sourceMappingURL=style.css.map */

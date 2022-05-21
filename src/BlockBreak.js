@@ -10,6 +10,9 @@ class View {
         this.width = width;
         this.height = height;
     }
+    ctxColor() {
+        this.ctx.fillStyle = 'red';
+    }
     update(model) {
         this.ctx.clearRect(0, 0, this.width, this.height);
         this.ctx.beginPath();
@@ -69,8 +72,8 @@ class Paddle {
     constructor(x, y) {
         this.x = x;
         this.y = y;
-        this.width = 5;
-        this.height = 100;
+        this.width = 200;
+        this.height = 5;
     }
     left() {
         return this.x - (this.width / 2);
@@ -219,5 +222,6 @@ class Frame {
     }
 }
 const canvas = document.getElementById('canvas');
+canvas === null || canvas === void 0 ? void 0 : canvas.style.backgroundColor = '#345';
 const frame = new Frame(WIDTH, HEIGHT, canvas, window);
 frame.start();

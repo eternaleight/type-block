@@ -20,6 +20,10 @@ class View {
     this.height = height;
   }
 
+  ctxColor() {
+    this.ctx.fillStyle = 'red'
+  }
+
   update(model: BlockBreaking) {
     this.ctx.clearRect(0, 0, this.width, this.height);
 
@@ -95,8 +99,8 @@ class Paddle {
   constructor(x: number, y: number) {
     this.x = x;
     this.y = y;
-    this.width = 5;
-    this.height = 100;
+    this.width = 200;
+    this.height = 5;
   }
 
   left() {
@@ -293,5 +297,6 @@ class Frame {
 }
 
 const canvas = document.getElementById('canvas');
+canvas?.style.backgroundColor = '#345';
 const frame = new Frame(WIDTH, HEIGHT, canvas, window);
 frame.start();
