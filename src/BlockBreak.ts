@@ -95,8 +95,8 @@ class Paddle {
   constructor(x: number, y: number) {
     this.x = x;
     this.y = y;
-    this.width = 800;
-    this.height = 10;
+    this.width = 5;
+    this.height = 100;
   }
 
   left() {
