@@ -69,10 +69,18 @@ img {
 @tailwind components;
 @tailwind utilities;
 html {
-  background: #232332; }
+  background: linear-gradient(228deg, #6899ccdd, #020021dd); }
 
 .fl {
   display: flex;
   flex-direction: column; }
+
+.size {
+  position: absolute;
+  top: 660px;
+  left: 650px;
+  width: 130px;
+  padding: 10px;
+  opacity: 0.7; }
 
 /*# sourceMappingURL=style.css.map */

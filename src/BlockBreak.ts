@@ -1,5 +1,5 @@
 const WIDTH = 800;
-const HEIGHT = 400;
+const HEIGHT = 800;
 
 class View {
 
@@ -54,7 +54,7 @@ class Block {
   y: number
   hidden: boolean
   constructor(x:number, y:number) {
-    this.width = 98;
+    this.width = 18;
     this.height = 18;
     this.x = x;
     this.y = y;
@@ -120,11 +120,11 @@ class Paddle {
   }
 
   moveRight() {
-    this.x += 10;
+    this.x += 20;
   }
 
   moveLeft() {
-    this.x -= 10;
+    this.x -= 20;
   }
 
   isCollided(ball: Ball) {
@@ -147,8 +147,8 @@ class Ball {
   constructor(x: number, y: number) {
     this.x = x;
     this.y = y;
-    this.vx = 0.5;
-    this.vy = 1;
+    this.vx = 1.5;
+    this.vy = 2;
     this.r = 10;
   }
 
@@ -197,12 +197,12 @@ class BlockBreaking {
     const initY = 200;
     this.ball = new Ball(initX, initY);
 
-    this.paddle = new Paddle(200, 300);
+    this.paddle = new Paddle(200, 700);
 
     this.blocks = [];
 
-    for (let i = 0; i < 8; i++) {
-      for (let j = 0; j < 4; j++) {
+    for (let i = 0; i < 9; i++) {
+      for (let j = 0; j < 7; j++) {
         this.blocks.push(new Block((j + 1) * 100, (i + 4) * 20));
       }
     }
@@ -273,11 +273,14 @@ class Frame {
   }
 
   handleKeyEvent(e: any) {
-    if (e.key === 'ArrowRight') {
+    if (e.key === 'ArrowRight' || e.keyCode === 76) {
       this.model.moveRight();
     }
-    if (e.key === 'ArrowLeft') {
+    if (e.key === 'ArrowLeft' || e.keyCode === 74) {
       this.model.moveLeft();
+    }
+    if (e.keyCode === 8 ) {
+      window.location.reload();
     }
   }
 
@@ -297,6 +300,10 @@ class Frame {
 }
 
 const canvas = document.getElementById('canvas');
-canvas?.style.backgroundColor = '#345';
+canvas?.style.backgroundImage = 'url(https://i.imgur.com/iyFIaBa.png)';
+canvas?.style.backgroundRepeat = 'no-repeat';
+canvas?.style.backgroundSize = '100px';
+canvas?.style.backgroundPosition = '670px 680px';
+canvas?.style.backgroundColor = '#33507799';
 const frame = new Frame(WIDTH, HEIGHT, canvas, window);
 frame.start();

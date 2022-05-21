@@ -5,10 +5,19 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 @tailwind utilities;
 
 html {
-  background: #232332;
+  background: linear-gradient(228deg ,#6899ccdd,#020021dd);
 }
 
  .fl {
    display: flex;
    flex-direction: column;
+ }
+
+ .size {
+   position: absolute;
+   top: 660px;
+   left: 650px;
+   width: 130px;
+   padding: 10px;
+   opacity: 0.7;
  }
