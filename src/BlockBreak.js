@@ -1,5 +1,5 @@
 "use strict";
-const WIDTH = 400;
+const WIDTH = 800;
 const HEIGHT = 400;
 class View {
     constructor(canvas, width, height) {
@@ -69,7 +69,7 @@ class Paddle {
     constructor(x, y) {
         this.x = x;
         this.y = y;
-        this.width = 80;
+        this.width = 800;
         this.height = 10;
     }
     left() {
@@ -139,8 +139,8 @@ class BlockBreaking {
         this.ball = new Ball(initX, initY);
         this.paddle = new Paddle(200, 300);
         this.blocks = [];
-        for (let i = 0; i < 4; i++) {
-            for (let j = 0; j < 6; j++) {
+        for (let i = 0; i < 8; i++) {
+            for (let j = 0; j < 4; j++) {
                 this.blocks.push(new Block((j + 1) * 100, (i + 4) * 20));
             }
         }
