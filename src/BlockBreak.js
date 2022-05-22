@@ -75,6 +75,9 @@ class Paddle {
         this.width = 200;
         this.height = 5;
     }
+    paddleSize() {
+        this.width = 800;
+    }
     left() {
         return this.x - (this.width / 2);
     }
@@ -106,8 +109,8 @@ class Ball {
     constructor(x, y) {
         this.x = x;
         this.y = y;
-        this.vx = 1.5;
-        this.vy = 2;
+        this.vx = 3.5;
+        this.vy = 5;
         this.r = 10;
     }
     next() {
@@ -194,6 +197,7 @@ class Frame {
         this.keyEventListener = null;
         this.view = new View(canvas, this.width, this.height);
         this.model = new BlockBreaking(this.width, this.height);
+        this.paddle = new Paddle(this.width, this.height);
         this.window = window;
     }
     start() {
@@ -207,6 +211,9 @@ class Frame {
         }
         if (e.key === 'ArrowLeft' || e.keyCode === 74) {
             this.model.moveLeft();
+        }
+        if (e.keyCode === 32) {
+            this.paddle.paddleSize();
         }
         if (e.keyCode === 8) {
             window.location.reload();
