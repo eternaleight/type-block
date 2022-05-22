@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Noto+Sans+JP&display=swap');
+
 html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,xmp{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}input,select,textarea,button{outline:none;}body{color:#000;-webkit-text-size-adjust:100%;}img{max-width:100%;}*{box-sizing: border-box;}
 
 @tailwind base;
@@ -7,17 +9,41 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 html {
   background: linear-gradient(228deg ,#6899ccdd,#020021dd);
 }
+.re {
+  font-family: noto sans jp;
+  position: relative;
+  width: 800px;
+  margin: auto;
+}
+
+.mx {
+  position: relative;
+  display: block;
+  width: 800px;
+  margin: auto;
+}
 
  .fl {
    display: flex;
    flex-direction: column;
  }
 
- .size {
+ .wh {
    position: absolute;
-   top: 660px;
-   left: 650px;
-   width: 130px;
-   padding: 10px;
-   opacity: 0.7;
+   top: -800px;
+   left: 760px;
+   color: #fff;
+ }
+
+ .bg {
+   border: 4px solid #ffffff51;
+   border-image: linear-gradient(to top, #ffffff21,#ffffff31);
+   border-image-slice: 30;
+   position: absolute;
+   top: -797px;
+   left: 752px;
+   height: 20px; 
+   width: 40px;
+   background: #33333333;
+   border-radius: 2px
  }

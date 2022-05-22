@@ -10,9 +10,6 @@ class View {
         this.width = width;
         this.height = height;
     }
-    ctxColor() {
-        this.ctx.fillStyle = 'red';
-    }
     update(model) {
         this.ctx.clearRect(0, 0, this.width, this.height);
         this.ctx.beginPath();
@@ -21,8 +18,12 @@ class View {
         this.ctx.fill();
         this.ctx.beginPath();
         this.ctx.rect(model.paddle.left(), model.paddle.up(), model.paddle.width, model.paddle.height);
+        this.ctx.fillStyle = '#aad';
+        this.ctx.fillRect(30, 30, 30, 30);
+        this.ctx.strokeRect(90, 540, 40, 40);
         this.ctx.stroke();
         this.ctx.fill();
+        this.ctx.fillStyle = 'aliceblue';
         model.blocks.forEach((b) => {
             if (b.hidden) {
                 return;
@@ -211,9 +212,6 @@ class Frame {
         }
         if (e.key === 'ArrowLeft' || e.keyCode === 74) {
             this.model.moveLeft();
-        }
-        if (e.keyCode === 32) {
-            this.paddle.paddleSize();
         }
         if (e.keyCode === 8) {
             window.location.reload();

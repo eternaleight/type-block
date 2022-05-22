@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Noto+Sans+JP&display=swap");
 html {
   color: #000;
   background: #FFF; }
@@ -71,16 +72,38 @@ img {
 html {
   background: linear-gradient(228deg, #6899ccdd, #020021dd); }
 
+.re {
+  font-family: noto sans jp;
+  position: relative;
+  width: 800px;
+  margin: auto; }
+
+.mx {
+  position: relative;
+  display: block;
+  width: 800px;
+  margin: auto; }
+
 .fl {
   display: flex;
   flex-direction: column; }
 
-.size {
+.wh {
   position: absolute;
-  top: 660px;
-  left: 650px;
-  width: 130px;
-  padding: 10px;
-  opacity: 0.7; }
+  top: -800px;
+  left: 760px;
+  color: #fff; }
+
+.bg {
+  border: 4px solid #ffffff51;
+  border-image: linear-gradient(to top, #ffffff21, #ffffff31);
+  border-image-slice: 30;
+  position: absolute;
+  top: -797px;
+  left: 752px;
+  height: 20px;
+  width: 40px;
+  background: #33333333;
+  border-radius: 2px; }
 
 /*# sourceMappingURL=style.css.map */
