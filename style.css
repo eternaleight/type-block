@@ -76,8 +76,15 @@ html {
   font-family: noto sans jp;
   position: relative;
   width: 800px;
-  margin: auto; }
+  margin: auto;
+  animation: aaa 1s cubic-bezier(0.23, 1, 0.32, 1); }
 
+@keyframes aaa {
+  0% {
+    transform: translate(0, -20px);
+    opacity: 0.2; }
+  100% {
+    opacity: 1; } }
 .mx {
   position: relative;
   display: block;

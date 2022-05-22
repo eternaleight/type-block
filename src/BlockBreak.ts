@@ -9,8 +9,8 @@ class View {
     getContext?: any
   }
   ctx: CanvasRenderingContext2D
-    width: number
-    height: number
+  width: number
+  height: number
   constructor(canvas: {width: number,height: number}, width: number, height: number) {
     this.canvas = canvas;
     this.canvas.width = width;
@@ -103,7 +103,7 @@ class Paddle {
     this.height = 5;
   }
 
-   paddleSize() {
+  paddleSize() {
     this.width = 800;
   }
 
