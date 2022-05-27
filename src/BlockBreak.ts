@@ -37,8 +37,9 @@ class View {
     this.ctx.fill();
     this.ctx.fillStyle = 'aliceblue'
 
-    model.blocks.forEach((b:any) => {
+    model.blocks.forEach((b:Block) => {
       if (b.hidden) { return }
+    this.ctx.fill();
       this.ctx.beginPath();
       this.ctx.rect(b.left(), b.up(), b.width, b.height);
       this.ctx.stroke();
