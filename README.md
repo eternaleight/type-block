@@ -1,5 +1,5 @@
 # type-block/web-app
-### left = (L,←) &nbsp;&nbsp;right = (H,→) 
+### left = (J,←) &nbsp;&nbsp;right = (L,→) 
 
 #### [type-block](https://type-block.vercel.app/)
 
